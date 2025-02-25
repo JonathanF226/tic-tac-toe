@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"; 
 
 function Board() {
     const [squares, setSquares] = useState(Array(9).fill(null));
@@ -12,11 +12,10 @@ function Board() {
     }
 
     return (
-        <div>
+        <div className="board">
             {squares.map((value, index) => (
-                <button key={index} onClick={() => handleClick(index)}>
+                <button key={index} className="square" onClick={() => handleClick(index)}>
                     {value}
-                    <p>works!</p>
                 </button>
             ))}
         </div>
