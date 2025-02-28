@@ -21,6 +21,7 @@ function Board() {
     };
 
     const winner = calculateWinner(squares);
+    const isDraw = !winner && squares.every(square => square !== null);
 
     const handleClick = (index) => {
         if(squares[index]) return;
@@ -33,7 +34,7 @@ function Board() {
 
     return (
         <>
-            <h2>{winner ? `Winner: ${winner}` : `Next Player: ${isXNext ? "X" : "O"}`}</h2>
+            <h2>{winner ? `Winner: ${winner}` : isDraw ? "It's a Draw!" : `Next Player: ${isXNext ? "X" : "O"}`}</h2>
             <div className="board">
                 {squares.map((value, index) => (
                     <button key={index} className="square" onClick={() => handleClick(index)}>
