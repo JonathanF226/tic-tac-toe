@@ -32,6 +32,11 @@ function Board() {
         setIsXNext(!isXNext);
     }
 
+    const resetGame = () => {
+        setSquares(Array(9).fill(null));
+        setIsXNext(true);
+    };
+
     return (
         <>
             <h2>{winner ? `Winner: ${winner}` : isDraw ? "It's a Draw!" : `Next Player: ${isXNext ? "X" : "O"}`}</h2>
@@ -42,6 +47,7 @@ function Board() {
                     </button>
                 ))}
             </div>
+            <button className="reset-button" onClick={resetGame}>Restart Game</button>
         </>
         
     )

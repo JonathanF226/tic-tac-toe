@@ -15,4 +15,20 @@
     border: 2px solid black;
     cursor: pointer;
   }
+
+  .reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background-color: #cc3838;
+}
+
   
